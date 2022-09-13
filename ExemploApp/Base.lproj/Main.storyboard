@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ExemploApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5V-li-t9d">
+                                <rect key="frame" x="20" y="236" width="374" height="167"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="167" id="ML5-vc-3m6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="30"/>
+                                <color key="textColor" red="0.98039215686274506" green="0.58039215686274503" blue="0.58039215686274503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.81176470588235294" green="0.82352941176470584" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="shadowColor" red="0.81176470588235294" green="0.82352941176470584" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="-2" height="1"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eXt-SM-zpN">
+                                <rect key="frame" x="55" y="520" width="305" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUf-vu-DgU">
+                                <rect key="frame" x="114" y="617" width="186" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="hFx-oN-6id"/>
+                                </constraints>
+                                <color key="tintColor" red="0.92156862745098034" green="0.11372549019607843" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Enviar"/>
+                                <connections>
+                                    <action selector="SendText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lWM-f1-2D5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.92941176470588238" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="c5V-li-t9d" firstAttribute="centerX" secondItem="eXt-SM-zpN" secondAttribute="centerX" id="3wc-BI-6KF"/>
+                            <constraint firstItem="nUf-vu-DgU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="114" id="6Ax-nh-5NE"/>
+                            <constraint firstItem="eXt-SM-zpN" firstAttribute="centerX" secondItem="nUf-vu-DgU" secondAttribute="centerX" id="6Gy-1V-9Nr"/>
+                            <constraint firstItem="nUf-vu-DgU" firstAttribute="top" secondItem="eXt-SM-zpN" secondAttribute="bottom" constant="63" id="DVE-fJ-Z3m"/>
+                            <constraint firstItem="c5V-li-t9d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="c4T-y2-bBM"/>
+                            <constraint firstItem="c5V-li-t9d" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="jQI-SR-vmn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nUf-vu-DgU" secondAttribute="bottom" constant="201" id="nnQ-za-QKp"/>
+                            <constraint firstItem="c5V-li-t9d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="192" id="sPU-ON-vi3"/>
+                            <constraint firstItem="eXt-SM-zpN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="w41-ll-WGK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="DisplayedText" destination="c5V-li-t9d" id="sVV-Ib-y1U"/>
+                        <outlet property="SendButton" destination="nUf-vu-DgU" id="rtE-ob-Tr5"/>
+                        <outlet property="TypedText" destination="eXt-SM-zpN" id="pe9-dK-KiL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
+        </scene>
+    </scenes>
+</document>
